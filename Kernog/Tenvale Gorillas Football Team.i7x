@@ -403,8 +403,123 @@ to say GorillaTrainingEnd:
 
 
 [Football match.]
-[future plans: quest because of fixed matches?]
-[Long-term project: having several variations]
+[
+After-match loser submits to punishment game
+
+One match equals four phases:
+	- Kick-off
+	- 1st term (random)
+	- 2nd term (random)
+	- final stretch
+
+Score counts as such:
+- Kick-off = 1 pt
+- 1st term = 2 pts
+- 2nd term = 2 pt
+- stretch = 4 pts
+
+Kick-off:
+	- if player kicks, str check for tackle
+	- if player receives, dex check for reception
+
+Play events:
+	- Player has the ball: str (power through) or dex (pass) check
+	- Player is tackled: end (resist) or per (look for pass) check
+	- Player tackles: str + dex check. Depending on whether the player charges or waits, str or dex is harder/easier
+	- Player intercepts: end + per. Same test whether the player runs or looks for the ball
+
+Mid-game events (random)
+	- pep talk (cha check, gives bonus to next term)
+	- mid-game interview (int check, idem)
+	- cheerleader show (funny, no consequence)
+	- referee conspiracy (per check, malus if failed)
+	- fan melee (str check, malus if failed)
+	- Player recruits events
+
+Stretch:
+	- Team having an advantage in points wins the game
+	- > 2 = curbstomp scene
+	- else struggling victory
+
+Resolutions:
+0: first match
+1: first victory
+2: successive victories
+-1: first defeat
+-2: successive defeats
+
+to footballMidgameEvent:
+	let random be a random number between 1 and 4;
+	if random is...
+]
+
+Football Match is a situation.
+
+instead of resolving Football Match:
+	if TimekeepingVar is not 2 or TimekeepingVar is not 3 or TimekeepingVar is not :
+		say "No match yet";
+	else:
+		let score be a number that varies;
+		let outcome be a truth state that varies; [true is victory, false is defeat]
+		now outcome is false;
+		say "[footballMatchIntro]";
+		if a random chance of 1 in 2 succeeds:
+			say "KickOffKick";
+			if str test succeeds:
+				say "Successful tackle";
+				increase score by 1;
+			else:
+				say "Failed tackle";
+				decrease score by 1;
+		else:
+			say "KickOffReceive";
+			if dex test succeeds:
+				say "Successful reception";
+				increase score by 1;
+			else:
+				say "Failed reception";
+				decrease score by 1;
+		footballMatchEvent score; [1st term]
+		footballMidgameEvent;
+		footballMatchEvent score; [2nd term]
+		if score < -2:
+			say "Crushing defeat";
+		else if score < 0:
+			say "Hardfought defeat";
+		else if score < 2:
+			say "Hardfought victory";
+			now outcome is true;
+		else:
+			say "Crushing victory";
+			now outcome is true;
+		if outcome is false: [Defeat]
+			if Resolution of Football Match >= 0:
+				now Resolution of Football Match is -1;
+			else if Resolution of Football Match is -1:
+				now Resolution of Football Match is -2;
+			say "[footballMatchDefeatSex]";
+		else:
+			if Resolution of Football Match <= 0:
+				now Resolution of Football Match is 1;
+			else if Resolution of Football Match is 1:
+				now Resolution of Football Match is 2;
+			say "[footballMatchVictorySex]";
+
+to say footballMatchIntro:
+	say "     'Right on time. We are going to play against the Fourmont Wolves in half-an-hour, and I was about to fill the last positions in our line-up. Go get your gear, champ.[first time] I assigned you a personal locker, by the way.[only]' You hurry to the locker-room, and put on your helmet and shoulder-pads. You meet the other teammates there and, after some greeting and some motivation ritual, you go back on the field.";
+	say "     The team captain brings you together, while the spectators start taking place";
+
+	if Resolution of Football Match is 0:
+		say "First match intro";
+	else if ... 1:
+		say "One victory intro";
+	else if ... 2:
+		say "Successive victories intro";
+	else if ... -1:
+			say "One defeat intro";
+	else:
+			say "Sucessive defeats";
+
 to say FootballMatch:
 	say "     'Right on time. We are going to play against the Fourmont Wolves in half-an-hour, and I was about to fill the last positions in our line-up. Go get your gear, champ.[first time] I assigned you a personal locker, by the way.[only]' You hurry to the locker-room, and put on your helmet and shoulder-pads. You meet the other teammates there and, after some greeting and some motivation ritual, you go back on the field.";
 	say "     You find Roman chatting with the captain of the Wolves. 'Now, where were we?' you can hear him ponder. [first time]Curious, you interrogate one of the other players about the issue. 'Oh, that's right. It's your first match,' your teammate ponders. 'You see, since there is a lot of [italic type]action[roman type] going on, we barely have the time to play a couple of phases, before we stop for the day. And to be honest, these two are the only ones who keep the tabs. Even the ref stopped caring; he's only here to prevent the players from hurting each other, and keep us focused on the match. When he's not busy jacking and fingering himself, of course.' [only]'If I'm correct, we're pushing, and we stopped right on your thirty yards line,' the canine replies as he scratches his head, trying to remember, 'and we're still stuck at 7-7. In which quarter are we, by the way?'[line break]'Does it really matter?' Roman replies, and both of them smile mischievously at each other.";

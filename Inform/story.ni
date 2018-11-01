@@ -3180,6 +3180,17 @@ roughing is a truth state that varies. roughing is usually false.
 
 check resting:
 	now roughing is false;
+	if Empty bunk is present:
+		say "     You figure that you could use the free bunk to get some rest, so you [if player is not naked]take your clothes off and [end if]slip under the covers. The warmth and comfort of your temporary bed makes you groan in pleasure. Somebody suddenly pulls up the sheets and you find yourself looking at a grumbling, half-asleep gorilla. 'Mmmrr... Bunks're for the team, you know? [bold type]Care to share?[roman type]'";
+		say "     [link]Y[as]y[end link] - Agree.";
+		say "     [link]N[as]n[end link] - Refuse.";
+		if player consents:
+			say "     'Thanks, pal,' the ape grunts, probably grateful that you let him sleep without having to wrestle for the bed. The massive body of the gorilla slides under the bed, surrounding you in more than 250 pounds of black-furred muscles. While it keeps you warm, you can't help but wonder if this is a good idea, especially when you realize that you are both naked, and his thighs start to rub involuntarily against yours.";
+			emptyBunkRest;[check Kernog/Astroslide Field Locker-room]
+		else:
+			LineBreak;
+			say "     'Then fuck off...' the ape growls. He shakes the bunk with his powerful arms, and literaly throws you out of the bed. The primates takes your place, grumbling a few choice words, while you are left getting your things back and dusting your body. Another bed frees itself as one of the apes return to the party next door, so you could try again. [bold type]But if you are not prepared to share the bed, it will have the same results[roman type].";
+		stop the action;
 	if caffeinehigh of player > 0:
 		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest. Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
 		stop the action;
