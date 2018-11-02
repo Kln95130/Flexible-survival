@@ -27,20 +27,6 @@ Gorilla Team-Members is in Astroslide Field Locker-room.
 Gorilla Team-Members has a truth state called namesKnown.
 randGorilla is a text that varies.
 
-to chooseRandomPlayer:
-	let random be a random number between 1 and 3;
-	if randomnumber is:
-	-- 1:
-		now randGorilla is "Josh"; [Quarterback - strong, assertive, prefers rough sex]
-	-- 2:
-		now randGorilla is "Zach"; [Running back - largest, gentle, likes cuddles]
-	-- 3:
-		now randGorilla is "Mike"; [wide receiver - smaller, unsure, always tops]
-	-- 4:
-		now randGorilla is "Charles";[lineman - dilettante, flirty, foot/sock kink]
-	-- 5:
-		now randGorilla is "Nicholas";[tackle - party goer, jockstrap/underwear kink]
-
 to say gorillaTeamMembersDesc:
 if Gorilla Team-Members is in Astroslide Field Locker-room:
 	if TimekeepingVar is 7 pr TimekeepingVar is -1 or TimekeepingVar is 1 or TimekeepingVar is -7 or TimekeepingVar is 0 or TimekeepingVar is -8:[Night]
@@ -132,9 +118,22 @@ instead of fucking the Gorilla Team-Members:
 	else:
 		if player is in Astroslide Football Field:
 			if player is pure and bodyname of player is "Football Gorilla":
-				say "";
+				let fanGender be a random number between 1 and 2;
+				say "     'Want to have some fun with us, cousin?' one of the gorillas asks, after you mention the topic of sex. His friends chuckle. The ape leans towards you and whispers, out of earshot of the fans. 'You're not part of the team yet, are you? I don't think anyone'll mind, and certainly not them.' At his invitation, you lean on the barrier separating the seats from the field. The fans oogle you like a piece of candy, until one of them approaches you and offers to give you some [']relaxation[']. [if fanGender is 1]He[else]She[end if] kneels in front of you, and slowly [stripCrotch]. Your ape neighbor looks at the scene with curiosity.";
+				if player is not male:
+					say "     The fan does not mind your absence of cock one bit. [if fanGender is 1]He[else]She[end if] eagerly buries [if fanGender is 1]his[else]her[end if] face between your thighs and starts kissing your [cunt size desc] pussy. The noises that the fan makes smooching and licking your clit barely distract the rest of the group, although you feel amused looks focused on you. Considering that you are not the only gorilla being serviced in this fashion, you are far from being the center of attention. The other gorillas actually ask you questions, now and then, and you need great efforts to take your attention away from the relentless mouth latched on your cunt, in order to answer.";
+					say "     Your orgasm arrives just as you are in the middle of trying to answer a question about [one of]your favorite NFL team[or]your life outside of the Campus[or]the latest match against the Fourmont Wolves[end if]. Your sudden shrill of pleasure earns you a hearty laugh from your interlocutor, and a couple of cat calls, while you grind your crotch against the servicing fan's face.";
+				else if player is herm:
+					say "The fan expertly grabs your cock and starts stroking. Once you are at an enjoyable size, [if fanGender is 1]he[else]she[end if] does not waste time and wraps [if fanGender is 1]his[else]her[end if] lips around your [cock of player] member. The fan's fingers find your herm pussy while playing with your balls, and you quickly feel a pair of fingers grind the inside of your vagina. The noisy slurps and your groans barely distract the rest of the group, although you feel amused looks focused on you. Considering that you are not the only gorilla being serviced in this fashion, you are far from being the center of attention. The other gorillas actually ask you questions, now and then, and you need great efforts to take your attention away from the relentless mouth latched on your [cock size desc] cock, in order to answer.";
+					say "     Your orgasm arrives just as you are in the middle of trying to answer a question about [one of]your favorite NFL team[or]your life outside of the Campus[or]the latest match against the Fourmont Wolves[end if]. Your sudden shrill of pleasure earns you a hearty laugh from your interlocutor, and a couple of cat calls, while you grind your crotch against the servicing fan's face, while [if fanGender is 1]he[else]she[end if] handles your [cum load size of player] discharge.";
+				else:
+					say "The fan expertly grabs your cock and starts stroking. Once you are at an enjoyable size, [if fanGender is 1]he[else]she[end if] does not waste time and wraps [if fanGender is 1]his[else]her[end if] lips around your [cock of player] member. The fan's hand keeps playing with your balls, kneading and squeezing them to stimulate them. The noisy slurps and your groans barely distract the rest of the group, although you feel amused looks focused on you. Considering that you are not the only gorilla being serviced in this fashion, you are far from being the center of attention. The other gorillas actually ask you questions, now and then, and you need great efforts to take your attention away from the relentless mouth latched on your [cock size desc] cock, in order to answer.";
+					say "     Your orgasm arrives just as you are in the middle of trying to answer a question about [one of]your favorite NFL team[or]your life outside of the Campus[or]the latest match against the Fourmont Wolves[end if]. Your sudden shrill of pleasure earns you a hearty laugh from your interlocutor, and a couple of cat calls, while you grind your crotch against the servicing fan's face, while [if fanGender is 1]he[else]she[end if] handles your [cum load size of player] discharge.";
+				say "     The fan gets back on [if fanGender is 1]his[else]her[end if] feet, licking [if fanGender is 1]his[else]her[end if] chops in satisfaction. You thank [if fanGender is 1]his[else]her[end if] as you [selfDressCrotch].";
 			else:
-				say "Give service/No.";
+				say "     'Good timing. I was looking for someone to help blow off some steam.', one of the apes say. 'Of course, [italic type]you[roman]'re gonna do the blowing.' The primate points to a spot in front of him, and leans against the barrier separating the seats from the field. By the time you are on your knees and ready, the gorilla is already stroking his half-hard, and nudging you to relay his hand. You eagerly oblige, and wrap your lips around the big black cock. You suck on it like with gutso, eliciting grunts of approval from the gorilla. Now and then, he lifts his head to chat with one of his teammates, or with another fan, and it quickly becomes a game for you to call him back to attention, by a gentle tug on his balls, or a willingly loud suck on his veiny shaft. Each time you feel the gorilla about to explode, he makes you pause, wanting to savor your expertful sucking as long as he can. You can feel several looks upon you, either amused or envious, and although you are not the only one working on a football player, some of the apes go out of their way to pet your head or stroke your back to encourage you.";
+				say "     'Oh shit, it's about time we go back,' the ape says after a moment. He guides your hand between his buttcheeks and says: 'Put a finger in and make me finish. Come on.' You slide a finger in, while you intensify your bobbings on his cock. The gorilla almost jumps up instantly. 'Oh fuck, that's the shit! Oooh...' The player's big hands grab you, while his hips perform the final humps into your mouth. You are rewarded by the ape's cock pulsating in your mouth and releasing several ropes of cum down your throat. You slowly slide your mouth up his trembling rod, milking every last drop, until its glans pops out of your lips, almost as clean as it was when you started. Catching your breath, you notice that a small group has formed in the meantime, comprised of the players coming back from their training exercise, and the ones waiting for your partner to finish, and everyone is watching you. Several cheers and catcalls congratulate you on what certainly looked like a spectacular finish. Your gorilla partner pulls you back on his feet and gives you a kiss. 'You're the best, [nameOrDefault]. You should visit us at the locker-room tonight, if you have some spare time.'";
+				say "     Then, he leaves to resume his training session, leaving you with the new group taking their pause. Your arousing show inspired some fans to do the same to the newly arrived players, and you quickly cease to become the topic of discussion for the time being.";
 		else:
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
@@ -233,22 +232,105 @@ to say GorillaTeamSexInitiation: [bukkake (giving)]
 	say "     Joining the frantic fapping all around, you have a little bit of a competition with the ape next to you, to see who can get the other off first... and you win. It's a pretty close thing, with just seconds between the grunted bellow signifying his first splash of cum spraying out over the kneeling [if tempGender is 0]man[else]woman[end if]'s arm and your own orgasm, pumping out a long streak of your creamy load to hit the newbie on the shoulder. The gathered simian wankers don't let their target wait long either, and within moments, [if tempGender is 0]he[else]she[end if] is soaked to the bone in warm and sticky cum. After the short while they need to finish coming and catching their breaths, the freshly cum-bathed fan is lifted by many hands, gripping [if tempGender is 0]him[else]her[end if] securely despite [if tempGender is 0]his[else]her[end if] slipperiness, then carried off to the showers with a chant of, 'One of us! One of us!' You glimpse [one of]a trail of black fur starting to grow on his body[or]his body starting to take stockier proportions[or]his face starting to shift into apian traits[at random] under the effect of the nanites.";
 	say "     'I love this tradition,' your wanking partner says, then brings his fingers to his mouth to lick off the accumulated cum. 'Have fun with the rest of us,' he adds with a chuckle and gives your bare ass a playful swat before joining the others in the shower.";
 
-[TODO: Josh -> Public rough
-Zach -> worship
-Mike -> Bi-curious/experiment
-Charles-> Footjob
-Nicholas -> Sock pile]
-to say GorillaTeamSexOrgy:
-	chooseRandomPlayer;
-	if randGorilla is "Josh":
-		say "";
-	if randGorilla is "Zach":
-		say "Zach scene";
-	if randGorilla is "Mike":
-		say "Mike scene";
-	if randGorilla is "Charles":
-		say "Charles scene";
-	if randGorilla is "Nicholas":
-		say "Nicholas scene";
 
+to say GorillaTeamSexOrgy:
+	say "     You take a look around the room. You quickly recognize known faces among the apes partying. [bold type]With whom will you have fun tonight?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Random";
+	now sortorder entry is 1;
+	now description entry is "Walk around the room and let one of the players accost you.";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Josh";
+	now sortorder entry is 2;
+	now description entry is "Josh likes it rough.";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Zach";
+	now sortorder entry is 3;
+	now description entry is "The big Zach is fond of cuddles.";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Mike";
+	now sortorder entry is 4;
+	now description entry is "Mike tries to experiment, and needs an encouraging partner.";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Charles";
+	now sortorder entry is 5;
+	now description entry is "You know that Charles loves his new prehensile feet.";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Nicholas";
+	now sortorder entry is 6;
+	now description entry is "There's never enough soft cotton socks for Nicholas.";
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				clear the screen and hyperlink list;
+				now sextablerun is 1;
+				if nam is "Random":
+					chooseRandomPlayer;
+				if nam is "Josh":
+					now randGorilla is "Josh";
+				if nam is "Zach":
+					now randGorilla is "Zach";
+				if nam is "Mike":
+					now randGorilla is "Mike";
+				if nam is "Charles":
+					now randGorilla is "Charles";
+				if nam is "Nicholas":
+					now randGorilla is "Nicholas";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You decide to take your time and consider your options again.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+	if randGorilla is "Josh":
+		say "[joshOrgyScene]";
+	if randGorilla is "Zach":
+		say "[zachOrgyScene]";
+	if randGorilla is "Mike":
+		say "[mikeOrgyScene]";
+	if randGorilla is "Charles":
+		say "[charlesOrgyScene]";
+	if randGorilla is "Nicholas":
+		say "[nicolasOrgyScene]";
+
+to chooseRandomPlayer:
+	let random be a random number between 1 and 5;
+	if randomnumber is:
+	-- 1:
+		now randGorilla is "Josh"; [Quarterback - strong, assertive, prefers rough sex]
+	-- 2:
+		now randGorilla is "Zach"; [Running back - largest, gentle, likes cuddles]
+	-- 3:
+		now randGorilla is "Mike"; [wide receiver - smaller, unsure, always tops]
+	-- 4:
+		now randGorilla is "Charles";[lineman - dilettante, flirty, foot/sock kink]
+	-- 5:
+		now randGorilla is "Nicholas";[tackle - party goer, jockstrap/underwear kink]
+
+		[TODO: Josh -> Public rough
+		Zach -> worship
+		Mike -> Bi-curious/experiment
+		Charles-> Footjob
+		Nicholas -> Sock pile]
 Gorilla Team-Members ends here.
